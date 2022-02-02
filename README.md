@@ -16,21 +16,20 @@ material, practical sessions, and the assignment.
 
 # Getting Started
 
-We will demonstrate everything using a virtual box on
-[Codio](https://www.codio.com), for which you should already have a working
-account. All the required tools are already setup for you on Codio, so there is
-nothing to do if you are happy to work with your own virtual box there. We give
-the instructions for getting started with this in the [next
-section](#using-codio).
+In the practical sessions in the Diamond, we will be relying on the virtual
+environment provided by [Codio](https://www.codio.com), for which you should
+already have a working account. (If you do not have or have forgotten your login
+details, click the "sign in" button, and then click the "Lost your password?"
+link).
 
-If you prefer to use your own machine, however, you will need to ensure all the
-tools we're using in the module are installed and setup on your system. (If I
-was taking this module, this is what I would do! For your personal development I
-would suggest you at least attempt this.) Unfortunately, however, the teaching
-team does not have the resources to give help in setting everything up for each
-student's individual machine and configuration. Nevertheless, there is plenty of
-online help, pointers to which I give [in the section
-below](#individual-machine-setups). 
+All the required tools are already setup for you on Codio, so there is nothing
+to do if you are happy to work with your own virtual box there. We give the
+instructions for getting started with this in the [next section](#using-codio).
+
+You might want to set up your own machine at home or your laptop as well. Of
+course, you can log into Codio from there too, but sometimes it just feels good
+to be using your own preferred IDE and get your hands dirty setting stuff up
+from scratch yourself. Read on for more details. 
 
 ## Using Codio
 
@@ -73,7 +72,9 @@ can do this by opening a terminal and changing directory to somewhere
 appropriate on your system (on Codio, the default `workspace` directory is just
 fine):
 
-``git clone https://github.com/philmcminn/com3529-code.git``
+```console
+git clone https://github.com/philmcminn/com3529-code.git
+```
 
 # Compiling and Running Code in the Repository
 
@@ -114,11 +115,15 @@ assume that you're using the command line on Codio.
 For instance, to build the examples in the lectures directory, you first need to
 change to that directory in the terminal. 
 
-``cd lectures``
+```console
+cd lectures
+```
 
 To compile all the classes in a project, issue the following Maven command. 
 
-``mvn compile``
+```console
+mvn compile
+```
 
 Note that the first time you run a Maven command, Maven may need to download and
 install any relevant dependent libraries from its central repository. You will
@@ -127,11 +132,15 @@ a `BUILD SUCCESS` message.
 
 To compile all of the tests, issue the Maven command:
 
-``mvn test-compile``
+```console
+mvn test-compile
+```
 
 To run all of the tests in a project, the command is:
 
-``mvn test``
+```console
+mvn test
+```
 
 Note that some of the tests fail. This should not be the normal situation, but
 it's deliberate for the lecture examples – tune into the lectures to find out
@@ -141,12 +150,16 @@ We may want to run the tests in a specific class only. To do this specify the
 test class (`TestIsPositive` in this example) with an additional parameter as
 follows:
 
-``mvn test -Dtest=TestIsPositive``
+```console
+mvn test -Dtest=TestIsPositive
+```
 
 To run a specific test, specify the test class, with the particular method you
 want to run (`testGreaterThan1`) separated by a hash symbol:
 
-``mvn test -Dtest=TestIsPositive#testGreaterThan1``
+```console
+mvn test -Dtest=TestIsPositive#testGreaterThan1
+```
 
 One of the main uses of Maven is to package up a Java application and its
 dependencies into a JAR file that can be independently run and distributed
@@ -156,7 +169,9 @@ The command required requires the fully qualified class name (i.e., the class
 name prepended by its package name), as in the following example, from the Week
 1 lecture:
 
-``mvn exec:java -Dexec.mainClass="uk.ac.shef.com3529.lectures.execution.ExhaustivelyExecuteCalendar"``
+```console
+mvn exec:java -Dexec.mainClass="uk.ac.shef.com3529.lectures.execution.ExhaustivelyExecuteCalendar"
+```
 
 All the above examples are real examples using this repository, and should work
 "out of the box" without any problems, assuming you have followed all the
@@ -169,7 +184,9 @@ file and won't feature as part of any commits unless you remove it from there.)
 To reset the project (i.e., clear out the `target` subdirectory), issue the
 following command:
 
-``mvn clean``
+```console
+mvn clean
+```
 
 # Problems or Feedback
 
