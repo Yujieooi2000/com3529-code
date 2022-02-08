@@ -75,6 +75,7 @@ public class TestWeek1 {
     }
     // (b) A JUnit test case that does not execute the fault
     @Test
+    public void testOddOrPosDoesNotExecuteFault() {
     }
     // (c) A JUnit test case that executes the fault but does not infect the program state
     @Test
