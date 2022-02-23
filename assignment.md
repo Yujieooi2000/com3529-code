@@ -109,8 +109,6 @@ instance:
 The last two cases of "equivalence" are somewhat curious, but are consistent
 with applying MCDC, as discussed in the practical class in Week 3.
 
-Your tool should also be able to report infeasible conditions.
-
 The information manually parsed and stored in your data structure should reflect
 the branch predicate in the original program as far as is possible. That is, you
 shouldn't write it in such a way that it side-steps any automated reasoning by
